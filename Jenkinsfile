@@ -4,9 +4,10 @@ pipeline {
         maven 'maven'
     }
     stages{
-        stage('ls la'){
+        stage('hadolint'){
             steps{
-                sh 'ls -la'
+                sh 'docker run --rm -i hadolint/hadolint < Dockerfile | tee -a hadolint_lint.txt'
+                archiveArtifacts artifacts: 'hadolint_lint.txt', followSymlinks: false
             }
         }
         stage('Build docker image'){
