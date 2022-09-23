@@ -48,4 +48,3 @@ if (isset($_POST['update'])) {
   </div>
 </div>
 <?php include('includes/footer.php'); ?>
-#comment
