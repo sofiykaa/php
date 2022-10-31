@@ -2,7 +2,7 @@
 session_start();
 
 $conn = mysqli_connect(
-  'db',
+  'cruddb.cmjveaivm8l6.us-east-2.rds.amazonaws.com',
   'root',
   'password12345',
   'php_mysql_crud'
